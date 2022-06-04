@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<include>
+  <gateway name="{{ name }}">
+    <param name="register" value="false"/>
+    <!-- Trigger SIP/TLS - might work to bind transport=tls with a different param. -->
+    <param name="register-transport" value="tls"/>
+    <param name="username" value="{{ username }}"/>
+    <param name="password" value="{{ password }}"/>
+    <param name="proxy" value="{{ proxy }}"/>
+    <param name="realm" value="{{ realm }}"/>
+    <!-- VoIP.ms requires this. -->
+    <param name="sip_cid_type" value="rpid"/>
+  </gateway>
+<include>

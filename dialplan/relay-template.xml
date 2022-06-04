@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<include>
+  <extension name="{{ dialed_number }}">
+    <condition regex="all">
+      <regex field="destination_number" expression="^{{ dialed_number }}$"/>
+      <action application="set" data="inherit_codec=true"/>
+      <action application="export" data="_nolocal_rtp_secure_media=true"/>
+      <action application="set" data="ignore_early_media=true"/>
+      <action application="set" data="ringback=%(2000,4000,440.0,480.0)"/>
+      <action application="bridge" data="sofia/gateway/{{ gateway }}/{{ destination_number }}"/>
+    </condition>
+  </extension>
+</include>

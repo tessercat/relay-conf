@@ -1,0 +1,13 @@
+<configuration name="sofia.conf" description="Sofia Endpoint">
+
+  <global_settings>
+  </global_settings>
+
+  <profiles>
+    <X-PRE-PROCESS cmd="include" data="../profiles/inbound-v4.xml"/>
+    <X-PRE-PROCESS cmd="include" data="../profiles/inbound-v6.xml"/>
+    <X-PRE-PROCESS cmd="include" data="../profiles/outbound.xml"/>
+  </profiles>
+
+</configuration>
+
