@@ -6,7 +6,7 @@
     </aliases>
 
     <gateways>
-      <X-PRE-PROCESS cmd="include" data="outbound.xml.d/*.xml"/>
+      <X-PRE-PROCESS cmd="include" data="../../gateways/outbound.xml"/>
     </gateways>
 
     <domains>

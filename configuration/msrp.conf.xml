@@ -1,5 +1,8 @@
-<configuration name="msrp.conf" description="MSRP">
-  <settings>
-    <param name="listen-ip" value="127.0.0.1"/>
-  </settings>
-</configuration>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<include>
+  <configuration name="msrp.conf" description="MSRP">
+    <settings>
+      <param name="listen-ip" value="127.0.0.1"/>
+    </settings>
+  </configuration>
+</include>

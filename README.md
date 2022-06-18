@@ -5,23 +5,28 @@ for a simple personal SIP to PSTN relay.
 
 Variables in `vars.xml` must define
 global variables for
-switch-level RTP-port range
-and inbound/outbound SIP profile ports.
+switch-level RTP-port range,
+inbound/outbound SIP profile ports
+and inbound verto profile port.
 
 
 # Profiles
 
 The config contains
-three SIP profiles/interfaces in `profiles/`,
+three SIP profiles/interfaces in `configuration/sofia.conf.d/`,
 two inbound (one for each of IPv4 and IPv6)
 and an IPv4 outbound.
+
+The config contains
+two inbound verto profiles/interfaces in `configuration/verto.conf.d/`
+(one for each of IPv4 and IPv6).
 
 All profiles/gateways are SIP/TLS and SRTP-only,
 though dialplan extension params must enforce SRTP on outbound legs.
 
 ## Inbound
 
-Both inbound profiles accept calls
+All three inbound profiles accept calls
 without authorization
 in the `inbound` context,
 which simply imports
@@ -38,12 +43,12 @@ the non-existent `reject` context.
 ### Gateways
 
 The outbound profile
-imports gateways from `profiles/outbound.xml.d/`.
+imports gateways from `gateways/outbound.d/`.
 
 #### VoIP.ms
 
-Copy `profiles/voip.ms-template.xml`
-to `profiles/outbound.xml.d/`
+Copy `gateways/voip.ms-template.xml`
+to `gateways/outbound.d/`
 and replace template variables.
 
 

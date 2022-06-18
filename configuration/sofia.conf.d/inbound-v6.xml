@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?
+<?xml version="1.0" encoding="utf-8"?>
 <include>
-  <profile name="inbound-v4">
+  <profile name="inbound-v6">
 
     <aliases>
     </aliases>
@@ -13,18 +13,16 @@
 
     <settings>
 
-      <param name="sip-ip" value="$${local_ip_v4}"/>
-      <param name="ext-sip-ip" value="$${local_ip_v4}"/>
+      <param name="sip-ip" value="$${local_ip_v6}"/>
+      <param name="ext-sip-ip" value="$${local_ip_v6}"/>
 
       <param name="tls" value="true"/>
       <param name="tls-only" value="true"/>
       <param name="tls-sip-port" value="$${inbound_sip_port}"/>
       <param name="tls-version" value="tlsv1.2"/>
 
-      <param name="ws-binding" value="127.0.0.1:$${ws_port}"/>
-
-      <param name="rtp-ip" value="$${local_ip_v4}"/>
-      <param name="ext-rtp-ip" value="$${local_ip_v4}"/>
+      <param name="rtp-ip" value="$${local_ip_v6}"/>
+      <param name="ext-rtp-ip" value="$${local_ip_v6}"/>
       <param name="rtp-timer-name" value="soft"/>
       <!-- Channel var rtp_secure_media=true for outbound. -->
       <param name="require-secure-rtp" value="true"/>

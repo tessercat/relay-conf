@@ -1,13 +1,15 @@
-<configuration name="sofia.conf" description="Sofia Endpoint">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<include>
+  <configuration name="sofia.conf" description="Sofia Endpoint">
 
-  <global_settings>
-  </global_settings>
+    <global_settings>
+    </global_settings>
 
-  <profiles>
-    <X-PRE-PROCESS cmd="include" data="../profiles/inbound-v4.xml"/>
-    <X-PRE-PROCESS cmd="include" data="../profiles/inbound-v6.xml"/>
-    <X-PRE-PROCESS cmd="include" data="../profiles/outbound.xml"/>
-  </profiles>
+    <profiles>
+      <X-PRE-PROCESS cmd="include" data="sofia.conf.d/inbound-v4.xml"/>
+      <X-PRE-PROCESS cmd="include" data="sofia.conf.d/inbound-v6.xml"/>
+      <X-PRE-PROCESS cmd="include" data="sofia.conf.d/outbound.xml"/>
+    </profiles>
 
-</configuration>
-
+  </configuration>
+</include>

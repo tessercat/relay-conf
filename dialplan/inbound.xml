@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <include>
   <context name="inbound">
-    <X-PRE-PROCESS cmd="include" data="inbound.xml.d/*.xml"/>
+    <X-PRE-PROCESS cmd="include" data="inbound.d/*.xml"/>
   </context>
 </include>

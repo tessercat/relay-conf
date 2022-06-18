@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<include>
+  <profile name="inbound-v4">
+
+    <param name="bind-local" value="127.0.0.1:$${verto_port}"/>
+    <param name="secure-combined" value="$${certs_dir}/wss.pem"/>
+
+    <param name="ext-rtp-ip" value="$${local_ip_v4}"/>
+    <param name="rtp-ip" value="$${local_ip_v4}"/>
+    <param name="inbound-codec-string" value="PCMU"/>
+    <param name="outbound-codec-string" value="PCMU"/>
+
+    <param name="userauth" value="false"/>
+
+    <param name="dialplan" value="XML"/>
+    <param name="context" value="inbound"/>
+
+  </profile>
+</include>
